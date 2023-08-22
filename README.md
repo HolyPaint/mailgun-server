@@ -1,8 +1,6 @@
 # node-mailgun-server
 
-## Caso de estudio: Servidor de correos
-
-Esta aplicación envía un correo electrónico a un destinatario configurado en las variables de entorno, es consumido por [Holy Paint landing](https://github.com/juanfix/react-holy-paint-landing).
+This application sends an email to a recipient configured in the environment variables.
 
 ## Stack
 
@@ -15,18 +13,18 @@ Esta aplicación envía un correo electrónico a un destinatario configurado en 
 
 `host`/api/mail<br/>
 
-Crea y envía un email al destinatario configurado.
+It creates and sends an email
 
-**Parámetros: JSON**
+**Parameters: JSON**
 
-| Nombre    | Requerido | Tipo   | Descripción                      |
-| --------- | --------- | ------ | -------------------------------- |
-| `email`   | Si        | string | Email de la persona              |
-| `name`    | Si        | string | Nombre de la persona             |
-| `phone`   | Si        | string | Número de teléfono de la persona |
-| `message` | Si        | string | Mensaje del email                |
+| Name      | Required | Type   | Description   |
+| --------- | -------- | ------ | ------------- |
+| `email`   | Yes      | string | Email         |
+| `name`    | Yes      | string | Name          |
+| `phone`   | Yes      | string | Phone         |
+| `message` | Yes      | string | Email message |
 
-**Respuesta**
+**Response**
 
 ```
 {
@@ -36,12 +34,12 @@ Crea y envía un email al destinatario configurado.
 }
 ```
 
-## Servidor de desarrollo
+## Development server
 
-1. Clonar el repositorio.
-2. Renombra el archivo .env.template a .env
-3. Ingresa o modifica los datos correspondientes en el archivo .env
-4. Ejecutar el comando `yarn` en la ruta del proyecto para instalar las dependencias.
-5. Ejecutar el comando `yarn dev` para iniciar el servidor de desarrollo.
-6. Navegar a la página `http://localhost:{PORT}/`. Donde debes reemplazar el {PORT} por la variable de entorno configurada en el paso 3
-7. La aplicación cargará automáticamente cada que realice cambios en los archivos.
+1. Clone the repository.
+2. Rename the .env.template file to .env.
+3. Update the parameters of .env file.
+4. Run `yarn` to install the dependencies.
+5. Run `yarn dev` to init a dev server.
+6. Navigate to `http://localhost:{PORT}/`. You must replace the variable {PORT} to the variable defined in the step 3.
+7. The appication will automatically reload if you change any of the source files.
