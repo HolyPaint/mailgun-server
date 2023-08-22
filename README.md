@@ -7,13 +7,13 @@ This application sends an email to a recipient configured in the environment var
 - NodeJS 18.16.0
 - Express 4.18.2
 
-## Solución
+## Documentation
 
 ### POST
 
 `host`/api/mail<br/>
 
-It creates and sends an email
+It creates and sends an email.
 
 **Parameters: JSON**
 
