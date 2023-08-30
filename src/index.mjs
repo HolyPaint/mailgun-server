@@ -1,6 +1,8 @@
 import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 import {} from 'dotenv/config';
 import mailRoutes from './routes/mail.routes.js';
@@ -22,6 +24,9 @@ const main = () => {
   app.use(express.json());
 
   // Routes
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+
   app.use('/api/mail', mailRoutes);
 
   app.get('*', (req, res) => {
