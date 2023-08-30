@@ -2,9 +2,9 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 
-const main = () => {
-  require('dotenv').config();
+import {} from 'dotenv/config';
 
+const main = () => {
   // Crear servidor de express
   const app = express();
 
