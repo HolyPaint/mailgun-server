@@ -1,9 +1,9 @@
-const { response } = require('express');
+import { response } from 'express';
 
-const Mail = require('../models/mail.model');
-const sendEmail = require('../api/mailgunApi');
+import * as Mail from '../models/mail.model.js';
+import * as sendEmail from '../api/mailgunApi.js';
 
-const createAndSendMail = (req, res = response) => {
+export const createAndSendMail = (req, res = response) => {
   const { email, name, phone, message } = req.body;
 
   try {
@@ -32,8 +32,4 @@ const createAndSendMail = (req, res = response) => {
       message: 'Server error!',
     });
   }
-};
-
-module.exports = {
-  createAndSendMail,
 };

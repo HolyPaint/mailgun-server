@@ -3,7 +3,7 @@ import Mailgun from 'mailgun.js';
 
 import {} from 'dotenv/config';
 
-const sendMail = async (Mail) => {
+export const sendMail = async (Mail) => {
   const { email, name, phone, message } = Mail;
 
   const mailgun = new Mailgun(formData);
@@ -27,20 +27,9 @@ const sendMail = async (Mail) => {
           ${message}`,
   };
 
-  //   await client.messages
-  //     .create(process.env.MAILGUN_DOMAIN || '', messageData)
-  //     .then((res) => {
-  //       console.log(res);
-  //     })
-  //     .catch((err) => {
-  //       console.error(err);
-  //     });
-
   const response = await client.messages.create(
     process.env.MAILGUN_DOMAIN || '',
     messageData
   );
   return response;
 };
-
-module.exports = sendMail;

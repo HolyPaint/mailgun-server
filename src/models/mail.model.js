@@ -1,4 +1,4 @@
-class Mail {
+export class Mail {
   constructor(email, name, phone, message) {
     this.email = email;
     this.name = name;
@@ -6,5 +6,3 @@ class Mail {
     this.message = message;
   }
 }
-
-module.exports = Mail;
