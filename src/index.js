@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 
 import {} from 'dotenv/config';
+import { router } from './routes/mail.routes';
 
 const main = () => {
   // Crear servidor de express
@@ -21,7 +22,7 @@ const main = () => {
   app.use(express.json());
 
   // Routes
-  app.use('/api/mail', import('./routes/mail.routes'));
+  app.use('/api/mail', router);
 
   app.get('*', (req, res) => {
     res.sendFile(__dirname + 'public/index.html');
