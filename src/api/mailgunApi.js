@@ -1,7 +1,7 @@
 import formData from 'form-data';
 import Mailgun from 'mailgun.js';
 
-require('dotenv').config();
+import {} from 'dotenv/config';
 
 const sendMail = async (Mail) => {
   const { email, name, phone, message } = Mail;
