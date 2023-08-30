@@ -24,4 +24,4 @@ router.post(
   createAndSendMail
 );
 
-module.exports = router;
+module.exports = { router };
