@@ -6,6 +6,8 @@ import {} from 'dotenv/config';
 export const sendMail = async (Mail) => {
   const { email, name, phone, message } = Mail;
 
+  console.log();
+
   const mailgun = new Mailgun(formData);
   const client = mailgun.client({
     username: 'api',

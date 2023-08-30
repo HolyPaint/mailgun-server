@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 
 import {} from 'dotenv/config';
-import { mailRoutes } from './routes/mail.routes.js';
+import mailRoutes from './routes/mail.routes.js';
 
 const main = () => {
   // Crear servidor de express

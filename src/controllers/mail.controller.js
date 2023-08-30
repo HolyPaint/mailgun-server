@@ -1,14 +1,14 @@
 import { response } from 'express';
 
-import * as Mail from '../models/mail.model.js';
-import * as sendEmail from '../api/mailgunApi.js';
+import { Mail } from '../models/mail.model.js';
+import { sendMail } from '../api/mailgunApi.js';
 
 export const createAndSendMail = (req, res = response) => {
   const { email, name, phone, message } = req.body;
 
   try {
     const mail = new Mail(email, name, phone, message);
-    sendEmail(mail)
+    sendMail(mail)
       .then((res) => {
         console.log(res);
       })

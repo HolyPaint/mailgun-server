@@ -1,5 +1,5 @@
 import { response } from 'express';
-import * as validationResult from 'express-validator';
+import { validationResult } from 'express-validator';
 
 export const fieldsValidator = (req, res = response, next) => {
   // Manejo de errores
