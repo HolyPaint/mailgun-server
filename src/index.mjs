@@ -25,12 +25,12 @@ const main = () => {
 
   // Routes
   const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
+  const __dirname = path.dirname(path.dirname(__filename));
 
   app.use('/api/mail', mailRoutes);
 
   app.get('*', (req, res) => {
-    res.sendFile(__dirname + 'public/index.html');
+    res.sendFile(__dirname + '/public/index.html');
   });
 
   // Set port
